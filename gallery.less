@@ -1,0 +1,96 @@
+.widthHeight (@w, @h) {
+  width: @w;
+  height: @h;
+}
+
+.verticalListStyle() {
+  margin: 0px;
+  float: left;
+  padding: 0px;
+  list-style: none;
+  overflow: hidden;
+}
+
+.controlButtonStyle(@x, @y) {
+  background-image: url('http://www.geni.com/images/arrow-sprite.png');
+  background-position: @x @y;
+  background-color: #333;
+  width: 50px;
+  height: 40px;
+  cursor: pointer;
+  opacity: .5;
+  position: absolute;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+body, html {
+  background-color: #333;
+}
+
+.gallery {
+
+  margin-left: auto;
+  margin-right: auto;
+  .widthHeight(850px, 480px);
+
+  .thumbnails {
+    .widthHeight(200px, 480px);
+    .verticalListStyle();
+    margin-right: 5px;
+
+    li {
+      opacity: .5;
+      cursor: pointer;
+      height: auto;
+
+      &:hover {
+        opacity: .75;
+      }
+
+      &.selected {
+        opacity: 1;
+        cursor: auto;
+      }
+    }
+  }
+
+  .viewer {
+
+    .display {
+      .widthHeight(640px, 480px);
+      .verticalListStyle();
+    }
+
+    .controls {
+
+      position: relative;
+      top: 200px;
+
+      .previous {
+        .controlButtonStyle(97px, 93px);
+        -webkit-border-top-right-radius: 15px;
+        -webkit-border-bottom-right-radius: 15px;
+        -moz-border-radius-topright: 15px;
+        -moz-border-radius-bottomright: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        left: 205px;
+      }
+
+      .next {
+        .controlButtonStyle(50px, 93px);
+        -webkit-border-top-left-radius: 15px;
+        -webkit-border-bottom-left-radius: 15px;
+        -moz-border-radius-topleft: 15px;
+        -moz-border-radius-bottomleft: 15px;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        right: 5px;
+      }
+
+    }
+  }
+
+}

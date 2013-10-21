@@ -1,0 +1,85 @@
+body,
+html {
+  background-color: #333;
+}
+.gallery {
+  margin-left: auto;
+  margin-right: auto;
+  width: 850px;
+  height: 480px;
+}
+.gallery .thumbnails {
+  width: 200px;
+  height: 480px;
+  margin: 0px;
+  float: left;
+  padding: 0px;
+  list-style: none;
+  overflow: hidden;
+  margin-right: 5px;
+}
+.gallery .thumbnails li {
+  opacity: .5;
+  cursor: pointer;
+  height: auto;
+}
+.gallery .thumbnails li:hover {
+  opacity: .75;
+}
+.gallery .thumbnails li.selected {
+  opacity: 1;
+  cursor: auto;
+}
+.gallery .viewer .display {
+  width: 640px;
+  height: 480px;
+  margin: 0px;
+  float: left;
+  padding: 0px;
+  list-style: none;
+  overflow: hidden;
+}
+.gallery .viewer .controls {
+  position: relative;
+  top: 200px;
+}
+.gallery .viewer .controls .previous {
+  background-image: url('http://www.geni.com/images/arrow-sprite.png');
+  background-position: 97px 93px;
+  background-color: #333;
+  width: 50px;
+  height: 40px;
+  cursor: pointer;
+  opacity: .5;
+  position: absolute;
+  -webkit-border-top-right-radius: 15px;
+  -webkit-border-bottom-right-radius: 15px;
+  -moz-border-radius-topright: 15px;
+  -moz-border-radius-bottomright: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  left: 205px;
+}
+.gallery .viewer .controls .previous:hover {
+  opacity: 1;
+}
+.gallery .viewer .controls .next {
+  background-image: url('http://www.geni.com/images/arrow-sprite.png');
+  background-position: 50px 93px;
+  background-color: #333;
+  width: 50px;
+  height: 40px;
+  cursor: pointer;
+  opacity: .5;
+  position: absolute;
+  -webkit-border-top-left-radius: 15px;
+  -webkit-border-bottom-left-radius: 15px;
+  -moz-border-radius-topleft: 15px;
+  -moz-border-radius-bottomleft: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  right: 5px;
+}
+.gallery .viewer .controls .next:hover {
+  opacity: 1;
+}
